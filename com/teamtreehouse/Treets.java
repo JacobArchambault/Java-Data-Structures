@@ -22,13 +22,14 @@ public class Treets {
                 ObjectInputStream ois = new ObjectInputStream(fis);
         ) {
             treets = (Treet[]) ois.readObject();
-        } catch (IOException ioe) {
+        } catch(IOException ioe) {
             System.out.println("Error reading file");
             ioe.printStackTrace();
-        } catch (ClassNotFoundException cnfe) {
+        } catch(ClassNotFoundException cnfe) {
             System.out.println("Error loading treets");
             cnfe.printStackTrace();
         }
         return treets;
     }
+
 }
